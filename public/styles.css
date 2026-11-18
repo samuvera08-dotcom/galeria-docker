@@ -1,0 +1,76 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 2.5rem 1rem 1.5rem;
+  background: linear-gradient(135deg, #0e7490, #1e3a8a);
+}
+
+header h1 { font-size: 2.4rem; letter-spacing: 0.02em; }
+header p { opacity: 0.85; margin-top: 0.4rem; }
+
+.info {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.55);
+  font-size: 0.9rem;
+  font-family: ui-monospace, Menlo, monospace;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tarjeta {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #1e293b;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); }
+.tarjeta img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block; }
+.tarjeta h2 { font-size: 1rem; padding: 0.75rem 1rem; text-transform: capitalize; }
+
+.visor {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.visor[hidden] { display: none; }
+.visor img { max-width: 92vw; max-height: 80vh; border-radius: 8px; }
+.visor p { margin-top: 0.8rem; text-transform: capitalize; }
+
+#cerrar {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+footer { text-align: center; padding: 1.5rem; opacity: 0.6; font-size: 0.85rem; }

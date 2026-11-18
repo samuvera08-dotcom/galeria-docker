@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rutas del Mundo · Galería</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Rutas del Mundo</h1>
+    <p>Galería de fotos de viajes servida desde un contenedor Docker</p>
+    <div id="info" class="info">Cargando información del contenedor…</div>
+  </header>
+
+  <main id="galeria" class="galeria"></main>
+
+  <div id="visor" class="visor" hidden>
+    <button id="cerrar" aria-label="Cerrar">×</button>
+    <img id="visor-img" alt="">
+    <p id="visor-titulo"></p>
+  </div>
+
+  <footer>Node.js + Express · Imagen Docker <code>galeria-web:v1</code></footer>
+  <script src="app.js"></script>
+</body>
+</html>

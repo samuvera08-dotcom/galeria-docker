@@ -1,0 +1,8 @@
+# No copiar a la imagen: se instalan dentro con npm ci o no hacen falta para ejecutar la app
+node_modules
+npm-debug.log
+.git
+.gitignore
+.DS_Store
+README.md
+docs
